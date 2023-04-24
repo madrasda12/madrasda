@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Website Coming Soon</title>
+	<style>
+		body {
+		    background-image: url("..\\madraspic\\AdminLogin1.jpg");
+		    background-repeat: no-repeat;
+            background-size: cover; 
+			font-family: Arial, sans-serif;
+			color: #fff;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 4em;
+			margin: 0 auto;
+			padding-top: 20%;
+			animation: pulse 1s ease-in-out infinite;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 50%;
+			max-width: 500px;
+			animation: pulse 1s ease-in-out infinite;
+		}
+
+		/* Party Pop-Up Animation */
+		@keyframes confetti {
+			0% {
+				transform: translateY(-100%);
+			}
+			50% {
+				transform: translateY(0);
+			}
+			100% {
+				transform: translateY(-100%);
+			}
+		}
+
+		.confetti {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			animation: confetti 1s ease-in-out;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+		}
+
+		.confetti-piece {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			opacity: 0.8;
+			animation: confetti-piece 2s ease-in-out;
+			animation-fill-mode: forwards;
+		}
+
+		/* Animation for confetti piece */
+		@keyframes confetti-piece {
+			0% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(500px) rotate(180deg);
+			}
+			100% {
+				transform: translateY(1000px);
+			}
+		}
+
+		/* Animation for main text and image */
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.1);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		/* Media Query for Small Devices */
+		@media only screen and (max-width: 600px) {
+			h1 {
+				font-size: 2em;
+				padding-top: 30%;
+			}
+
+			img {
+				width: 80%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="confetti"></div>
+	<br><br><br><br><br><br><br><br>
+	<img src="..\\madraspic\madras da logo 5.png" alt="Website Coming Soon" width="300" height="300">
+    <p>Website Launching Soon</p>
+	<script>
+		// Add confetti elements
+		const confettiEl = document.querySelector('.confetti');
+		for (let i = 0; i < 50; i++) {
+			const confetti = document.createElement('div');
+			confetti.classList.add('confetti-piece');
+			confetti.style.backgroundColor = randomColor();
+			confetti.style.left = Math.random() * 100 + '%';
+			confetti.style.animationDelay = Math.random() * 2 + 's';
+			confettiEl.appendChild(confetti);
+		}
+
+
