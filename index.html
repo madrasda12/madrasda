@@ -4,10 +4,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Website Coming Soon</title>
 	<style>
-		body {
+		.body {
 		    background-image: "..//madrasda/AdminLogin1.jpg" !important;
 		    background-repeat: no-repeat;
-            background-size: cover; 
+                    background-size: cover; 
 			font-family: Arial, sans-serif;
 			color: #fff;
 			text-align: center;
@@ -102,11 +102,12 @@
 		}
 	</style>
 </head>
-<body style = background-image: "..//madrasda/AdminLogin1.jpg" >
-	<div class="confetti"></div>
+<body>
+	<div class="confetti">
 	<br><br><br><br><br><br><br><br>
-	<img src="" alt="Website Coming Soon" width="300" height="300">
+	<img src="..//madrasda/AdminLogin1.jpg" alt="Website Coming Soon" width="300" height="300">
     <p>Website Launching Soon</p>
+		<div>
 	<script>
 		// Add confetti elements
 		const confettiEl = document.querySelector('.confetti');
@@ -118,5 +119,8 @@
 			confetti.style.animationDelay = Math.random() * 2 + 's';
 			confettiEl.appendChild(confetti);
 		}
+		
+</body>
+</html>
 
 
